@@ -1,5 +1,7 @@
 # Kendrick Lamar Super Bowl Template
-
+    ```
+    To Install this template, you'll need to have nodeJS module install in your computer 
+    ```
 ## Installation
 
 1. **Clone the repository:**
