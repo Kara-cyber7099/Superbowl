@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -13,6 +13,37 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
+
+const pages = [
+    {
+        url: "/",
+        name: "Home"
+    },
+    {
+        url: 'red-button-and-new-orleans',
+        name: "Red button & New Orleans",
+    },
+    {
+        url: 'stage-and-visual-design',
+        name: "Stage & Visual Design",
+    },
+    {
+        url: 'customes-and-dancers',
+        name: "Customes & Dancers",
+    },
+    {
+        url: 'spoken-words',
+        name: "Spoken Words",
+    },
+    {
+        url: 'cultural-and-political-symbols',
+        name: "Cultural & Political Symbols",
+    },
+    {
+        url: 'social-media-and-aftermath',
+        name: "Social Media & Aftermath"
+    }
+]
 
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -31,37 +62,36 @@ export default function Navbar() {
         <>
             <AppBar position="static">
                 <Toolbar>
+                    <Typography variant="h6" fontWeight="bold" sx={{ flexGrow: 1 }}>
+                        Super Bowl
+                    </Typography>
+                    <Box sx={{ flexGrow: 1 }} />
                     <IconButton
-                        edge="start"
+                        edge="end"
                         color="inherit"
                         aria-label="menu"
                         onClick={handleDrawerToggle}
+                        size="large"
                         sx={{ mr: 2 }}
                     >
-                        <MenuIcon />
+                        <MenuIcon fontSize="large" />
                     </IconButton>
-                    <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                        Super Bowl
-                    </Typography>
                 </Toolbar>
             </AppBar>
             <Drawer
-                anchor="left"
+                anchor="right"
                 open={drawerOpen}
                 onClose={handleDrawerToggle}
             >
                 <List sx={{ width: 250 }}>
-                    <ListItem disablePadding>
-                        <ListItemButton onClick={() => handleNav('/')}>
-                            <ListItemText primary="Home" />
-                        </ListItemButton>
-                    </ListItem>
-                    <ListItem disablePadding>
-                        <ListItemButton onClick={() => handleNav('/about')}>
-                            <ListItemText primary="About" />
-                        </ListItemButton>
-                    </ListItem>
-                    {/* Add more menu items as needed */}
+                    {pages.map(({url, name}, index) => (
+                        <ListItem key={index} disablePadding>
+                            <ListItemButton onClick={() => handleNav(url)}>
+                                <ListItemText primary={name} />
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                 
                 </List>
             </Drawer>
         </>

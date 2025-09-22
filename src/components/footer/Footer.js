@@ -11,15 +11,14 @@ import IconButton from '@mui/material/IconButton';
 
 export default function Footer(){
     return (
-        <AppBar position="static" sx={{top: 'auto', bottom: 0}}>
+        <AppBar position="static" sx={{bottom: 0}}>
             <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu">
                     {/* <MenuIcon /> */}
                 </IconButton>
                 <Typography variant="h6">
-                    Super Bowl
+                    Super Bowl Footer
                 </Typography>
-                <Button color="inherit">Login</Button>
             </Toolbar>
         </AppBar>
     );
