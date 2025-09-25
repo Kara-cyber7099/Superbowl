@@ -28,7 +28,7 @@ export default function Index(){
 				bgcolor: '#0d0c0a', 
 				color: 'white' 
 			}}>
-				<Box sx={{ maxWidth: 700, p:1 }}>
+				<Box sx={{ maxWidth: 800, p:1 }}>
 					<Typography
 					variant="h3"
 					align='center'
@@ -57,6 +57,28 @@ export default function Index(){
 					}}>
 						A multimedia exploration of performance, politics, and symbolism.
 					</Typography>
+
+					<Box
+					component="div"
+					display="flex"
+					flexDirection="column"
+					justifyContent="center"
+					alignItems="center"
+					gap={2}
+					mt={2}>
+						<Typography>
+							Watch the Super Bowl Performance Clip.
+						</Typography>
+						<Button 
+						variant="contained" 
+						color="secondary"
+						size="large"
+						>
+							Super Bowl performance video
+						</Button>
+					</Box>
+					{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/KDorKy-13ak?si=YDCTrBxPyl2d5Vm9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> */}
+					{/* </iframe> */}
 				</Box>
 			</Box>
 		</Box>	

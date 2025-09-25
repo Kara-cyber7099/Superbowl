@@ -28,8 +28,8 @@ const pages = [
         name: "Stage & Visual Design",
     },
     {
-        url: 'customes-and-dancers',
-        name: "Customes & Dancers",
+        url: 'costumes-and-dancers',
+        name: "Costumes & Dancers",
     },
     {
         url: 'spoken-words',
