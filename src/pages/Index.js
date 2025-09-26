@@ -1,343 +1,178 @@
-import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import React from "react";
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  CardActionArea,
+  Grid,
+  Link,
+  Button,
+} from "@mui/material";
 
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+const Index = () => {
+  const pages = [
+    { title: "Red Button & New Orleans", link: "/page2" },
+    { title: "Stage & Visual Design", link: "/page3" },
+    { title: "Costumes & Dancers (America Worn on the Body)", link: "/page4" },
+    { title: "Spoken Words (Language as Resistance)", link: "/page5" },
+    { title: "Cultural & Political Symbols", link: "/page6" },
+    { title: "Social Media & Aftermath", link: "/page7" },
+  ];
 
-import Footer from '../components/footer/Footer';
+  return (
+    <Box>
+      {/* Hero Section */}
+      <Box
+	    pt={{xs: 0, md: 10}}
+        sx={{
+          height: "100vh",
+          width: "100%",
+          background: `url(https://images.unsplash.com/photo-1558258021-971dd2148be5?w=1200&auto=format&fit=crop&q=80) center/cover no-repeat`,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "white",
+          textAlign: "center",
+          position: "relative",
+        }}
+      >
+        {/* Overlay for readability */}
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.6)",
+            zIndex: 1,
+          }}
+        />
 
-export default function Index(){
-	const navigate = useNavigate();
+        {/* Content on top */}
+        <Box sx={{ position: "relative", zIndex: 2, maxWidth: "900px" }}>
+          <Typography variant="h3" fontWeight="bold" gutterBottom>
+            From Halftime to Hypermodal: Kendrick Lamar at the Super Bowl
+          </Typography>
+          <Typography variant="h6" gutterBottom>
+            A multimedia exploration of performance, politics, and symbolism.
+          </Typography>
 
-	return (
-	<Box component="div" mb={0}>
-		<Box component="div" sx={{ height: 'calc(100vh - 67px)' }}>
-			<Box
-			component="div"
-			display="flex"
-			justifyContent="center"
-			alignItems="center"
-			sx={{ 
-				height: '100%', 
-				background: 'url(https://images.unsplash.com/photo-1558258021-971dd2148be5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHJhcHBlcnxlbnwwfHwwfHx8MA%3D%3D)',
-				backgroundSize: 'cover',
-				backgroundRepeat: 'no-repeat',
-				bgcolor: '#0d0c0a', 
-				color: 'white' 
-			}}>
-				<Box sx={{ maxWidth: 800, p:1 }}>
-					<Typography
-					variant="h3"
-					align='center'
-					sx={{ 
-						fontWeight: 900, 
-						textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' 
-					}}>
-						From Halftime to Hypermodal
-					</Typography>
-					<Typography 
-					variant="h3" 
-					gutterBottom
-					align="center"
-					sx={{ 
-						fontWeight: 900, 
-						textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' 
-					}}>
-						Kendrick Lamar at the Super Bowl.
-					</Typography>
-					<Typography 
-					variant="h6"
-					align="center" 
-					sx={{ 
-						fontWeight: 500, 
-						textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' 
-					}}>
-						A multimedia exploration of performance, politics, and symbolism.
-					</Typography>
-
-					<Box
-					component="div"
-					display="flex"
-					flexDirection="column"
-					justifyContent="center"
-					alignItems="center"
-					gap={2}
-					mt={2}>
-						<Typography>
-							Watch the Super Bowl Performance Clip.
-						</Typography>
-						<Button 
-						variant="contained" 
-						color="secondary"
-						size="large"
-						>
-							Super Bowl performance video
-						</Button>
-					</Box>
-					{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/KDorKy-13ak?si=YDCTrBxPyl2d5Vm9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> */}
-					{/* </iframe> */}
-				</Box>
+          {/* Embedded Video */}
+          <Box
+			  sx={{
+			    display: "flex",
+			    justifyContent: "center",
+			    my: 4,
+			    width: "100%",
+			    maxWidth: 900, // optional, limits width on large screens
+			  }}
+			>
+			  <Box
+			    sx={{
+			      position: "relative",
+			      width: "100%",
+			      paddingTop: "56.25%", // 16:9 aspect ratio
+			    }}
+			  >
+			    <iframe
+			      src="https://www.youtube.com/embed/KDorKy-13ak?autoplay=0&mute=1"
+			      title="Kendrick Lamar Super Bowl Performance"
+			      frameBorder="0"
+			      allow="autoplay; encrypted-media"
+			      allowFullScreen
+			      style={{
+			        position: "absolute",
+			        top: 0,
+			        left: 0,
+			        width: "100%",
+			        height: "100%",
+			      }}
+			    />
+			  </Box>
 			</Box>
-		</Box>	
-		
-		<Box 
-		component="div" 
-		p={5} 
-		sx={{ 
-			bgcolor: '#f5f5f0', 
-		}}
-		>
-			<Container maxWidth="lg">
-				<Grid container spacing={0}>
-					<Grid size={{ xs: 12, sm:12, lg: 8 }}>
-						<Typography 
-						variant="h4" 
-						fontWeight="bolder"
-						gutterBottom>
-							Overview
-						</Typography>
-
-						<Box>
-							<Typography variant="body1">
-								Welcome to this interactive website exploring Kendrick Lamar’s Super Bowl halftime
-								performance. This site is designed to help you unpack the layers of meaning in the show —
-								from stage design, choreography, and costumes, to lyrics, cultural symbols, and political
-								commentary. Through videos, images, annotations, and interactive features, you’ll discover
-								how a single performance combines music, visuals, and cultural critique into a hypermodal
-								experience.
-							</Typography>
-						</Box>
-					</Grid>
-					<Grid size={{ xs: 12, sm: 12, lg: 4 }}>
-						<img src="" alt="" />
-					</Grid>
-				</Grid>
-				
-			</Container>
-		</Box>
 
 
-		<Box component="div" p={5}>
-			<Container maxWidth="lg">
-				<Grid container spacing={3}>
+          <Typography variant="body2">
+            <Link
+              href="https://youtu.be/KDorKy-13ak?feature=shared"
+              target="_blank"
+              rel="noopener"
+              underline="hover"
+              color="inherit"
+            >
+              Watch on YouTube
+            </Link>
+          </Typography>
+        </Box>
+      </Box>
 
-					{/* page 2 */}
-					<Grid size={{ xs: 12, sm: 12, lg: 4  }}>
-						<Box
-						component="div"
-						display="flex"
-						flexDirection="column"
-						justifyContent="center"
-						alignItems="center"
-						sx={{ 
-							boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
-							borderRadius: 2,
-							p: 2,
-							transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-							'&:hover':{transform: 'scale(.7)'}
-						}}>
-							<Typography 
-							variant="h6" 
-							fontWeight="bold"
-							align="center"
-							gutterBottom>
-								Red Button &amp; New Orleans (Opening the Portal)
-							</Typography>
-							<Button
-							fullWidth
-							color="primary"
-							variant="contained">
-								View Orleans
-							</Button>
-						</Box>
-					</Grid>
+      {/* Intro / Overview */}
+      <Box sx={{ maxWidth: "900px", mx: "auto", p: 4 }}>
+        <Typography variant="body1" paragraph>
+          Welcome to this interactive website exploring Kendrick Lamar’s Super
+          Bowl halftime performance. This site is designed to help you unpack
+          the layers of meaning in the show from stage design, choreography, and
+          costumes, to lyrics, cultural symbols, and political commentary.
+          Through videos, images, annotations, and interactive features, you’ll
+          discover how a single performance combines music, visuals, and
+          cultural critique into a hypermodal experience.
+        </Typography>
+        <Typography variant="body1" paragraph>
+          The site is structured so you can explore the performance step by
+          step. Each page breaks down a specific element: opening sequences,
+          stage design, costumes, spoken words, political symbols, and audience
+          responses. By the end, you will have a clear understanding of how all
+          these elements interconnect to create a rich, multi-layered message.
+        </Typography>
+      </Box>
 
-					{/* page 3 */}
-					<Grid size={{ xs: 12, sm: 12, lg: 4  }}>
-						<Box
-						component="div"
-						display="flex"
-						flexDirection="column"
-						justifyContent="center"
-						alignItems="center"
-						sx={{ 
-							boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
-							borderRadius: 2,
-							p: 2,
-							transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-							'&:hover':{transform: 'scale(.7)'}
-						}}>
-							<Typography 
-							variant="h6" 
-							fontWeight="bold"
-							align="center"
-							gutterBottom>
-								Stage &amp; Visual Design (The Great Game of America)
-							</Typography>
-							<Button
-							fullWidth
-							color="primary"
-							variant="contained">
-								See designs
-							</Button>
-						</Box>
-					</Grid>
+      {/* Navigation Cards */}
+      <Grid container spacing={3} justifyContent="center" sx={{ p: 4 }}>
+        {pages.map((page, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card
+              sx={{
+                height: "100%",
+                borderRadius: 3,
+                boxShadow: 4,
+                transition: "transform 0.3s",
+                "&:hover": { transform: "scale(1.05)" },
+              }}
+            >
+              <CardActionArea href={page.link}>
+                <CardContent>
+                  <Typography variant="h6" fontWeight="bold">
+                    {page.title}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
 
-					{/* page 2 */}
-					<Grid size={{ xs: 12, sm: 12, lg: 4 }}>
-						<Box
-						component="div"
-						display="flex"
-						flexDirection="column"
-						justifyContent="center"
-						alignItems="center"
-						sx={{ 
-							boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
-							borderRadius: 2,
-							p: 2,
-							transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-							'&:hover':{transform: 'scale(.7)'}
-						}}>
-							<Typography 
-							variant="h6" 
-							fontWeight="bold"
-							align="center"
-							gutterBottom>
-								Costumes &amp; Dancers (America Worn on the Body)
-							</Typography>
-							<Button
-							fullWidth
-							color="primary"
-							variant="contained">
-								View Customes ...
-							</Button>
-						</Box>
-					</Grid>
+      {/* Playlist CTA */}
+      <Box textAlign="center" sx={{ p: 4 }}>
+        <Typography variant="h6" gutterBottom>
+          You can also enjoy the Super Bowl playlist below:
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          href="https://open.spotify.com/playlist/37i9dQZF1DXdIpacQDPDV5"
+          target="_blank"
+          rel="noopener"
+          sx={{ borderRadius: 3, px: 4 }}
+        >
+          🎶 Open Playlist
+        </Button>
+      </Box>
+    </Box>
+  );
+};
 
-					{/* page 2 */}
-					<Grid size={{ xs: 12, sm: 12, lg: 4  }}>
-						<Box
-						component="div"
-						display="flex"
-						flexDirection="column"
-						justifyContent="center"
-						alignItems="center"
-						sx={{ 
-							boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
-							borderRadius: 2,
-							p: 2,
-							transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-							'&:hover':{transform: 'scale(.7)'}
-						}}>
-							<Typography 
-							variant="h6" 
-							fontWeight="bold"
-							align="center"
-							gutterBottom>
-								Spoken Words (Language as Resistance)
-							</Typography>
-							<Button
-							fullWidth
-							color="primary"
-							variant="contained">
-								See spoken words
-							</Button>
-						</Box>
-					</Grid>
+export default Index;
 
-					{/* page 2 */}
-					<Grid size={{ xs: 12, sm: 12, lg: 4  }}>
-						<Box
-						component="div"
-						display="flex"
-						flexDirection="column"
-						justifyContent="center"
-						alignItems="center"
-						sx={{ 
-							boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
-							borderRadius: 2,
-							p: 2,
-							transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-							'&:hover':{transform: 'scale(.7)'}
-						}}>
-							<Typography 
-							variant="h6" 
-							fontWeight="bold"
-							align="center"
-							gutterBottom>
-								Cultural &amp; Political Symbols (Uncle Sam)
-							</Typography>
-							<Button
-							fullWidth
-							color="primary"
-							variant="contained">
-								View Symbols
-							</Button>
-						</Box>
-					</Grid>
-
-					{/* page 2 */}
-					<Grid size={{ xs: 12, sm: 12, lg: 4  }}>
-						<Box
-						component="div"
-						display="flex"
-						flexDirection="column"
-						justifyContent="center"
-						alignItems="center"
-						sx={{ 
-							boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
-							borderRadius: 2,
-							p: 2,
-							transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-							'&:hover':{transform: 'scale(.7)'}
-						}}>
-							<Typography 
-							variant="h6" 
-							fontWeight="bold"
-							align="center"
-							gutterBottom>
-								Social Media &amp; Aftermath (Poll + Reactions)
-							</Typography>
-							<Button
-							fullWidth
-							color="primary"
-							variant="contained">
-								See aftermath
-							</Button>
-						</Box>
-					</Grid>
-				</Grid>
-			</Container>
-		</Box>
-
-		<Box 
-		component="div"
-		display="flex"
-		flexDirection="column"
-		justifyContent="center"
-		alignItems="center" 
-		p={5}>
-			<Typography 
-			variant="h5" 
-			fontWeight="bolder"
-			align="center" 
-			gutterBottom>
-				Start with The Red Button &amp; New Orleans”
-			</Typography>
-
-			<Button
-			variant="contained"
-			color="warning"
-			size="large"
-			onClick={() => navigate('/red-button-and-new-orleans')}>
-				See the Red Button &amp; New Orleans
-			</Button>
-		</Box>
-
-		<Footer />
-	</Box>
-	);
-}
