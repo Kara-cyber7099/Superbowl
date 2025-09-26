@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Superbowl/static/css/main.e6c13ad2.css",
+    "main.js": "/Superbowl/static/js/main.4bb9b358.js",
+    "static/js/453.7cd12e03.chunk.js": "/Superbowl/static/js/453.7cd12e03.chunk.js",
+    "index.html": "/Superbowl/index.html",
+    "main.e6c13ad2.css.map": "/Superbowl/static/css/main.e6c13ad2.css.map",
+    "main.4bb9b358.js.map": "/Superbowl/static/js/main.4bb9b358.js.map",
+    "453.7cd12e03.chunk.js.map": "/Superbowl/static/js/453.7cd12e03.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4bb9b358.js"
+  ]
+}
