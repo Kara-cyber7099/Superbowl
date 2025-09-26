@@ -7,7 +7,11 @@ import {
   Modal,
   Link,
   Button,
+  Container
 } from "@mui/material";
+
+import RevolutionVideo from '../assets/videos/RevolutionVideo.mp4';
+import Footer from '../components/footer/Footer';
 
 const SpokenWordsPage = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -16,6 +20,7 @@ const SpokenWordsPage = () => {
   const handleClose = () => setOpenModal(false);
 
   return (
+    <>
     <Box sx={{ p: 4, maxWidth: "900px", mx: "auto" }}>
       {/* Hero Section */}
       <Box sx={{ mb: 4 }}>
@@ -29,21 +34,27 @@ const SpokenWordsPage = () => {
         </Typography>
 
         {/* Embedded video clip */}
-        <Box
-          component="iframe"
-          src="https://www.youtube.com/embed/XUi580gA5BQ"
-          title="Jill Scott Clip"
-          sx={{
-            width: "100%",
-            height: "400px",
-            borderRadius: 2,
-            boxShadow: 3,
-          }}
-        />
-      </Box>
+
+        <Box sx={{
+         width: '100%', 
+         borderRadius: 2, 
+       }}>
+          <video
+          autoPlay
+          loop
+          poster="">
+            <source
+            src={RevolutionVideo}
+            type="video/mp4">
+              
+            </source>
+          </video>
+        </Box>
+
+        
 
       {/* Paragraph 1 */}
-      <Typography variant="body1" sx={{ mb: 3 }}>
+      <Typography variant="body1" sx={{ mb: 3, mt:3 }}>
         Kendrick Lamar’s performance begins with a striking declaration:{" "}
         <Tooltip title="Click to learn more" arrow>
           <Typography
@@ -67,6 +78,19 @@ const SpokenWordsPage = () => {
         version, Kendrick re-anchors the phrase into a contemporary context, critiquing the
         commercialization of resistance while reframing the stage as a site of real-time protest.
       </Typography>
+
+      <Box
+          component="iframe"
+          src="https://www.youtube.com/embed/XUi580gA5BQ"
+          title="Jill Scott Clip"
+          sx={{
+            width: "100%",
+            height: "400px",
+            borderRadius: 2,
+            boxShadow: 3,
+          }}
+        />
+      </Box>
 
       {/* Paragraph 2 */}
       <Typography variant="body1" sx={{ mb: 3 }}>
@@ -151,6 +175,8 @@ const SpokenWordsPage = () => {
         </Box>
       </Modal>
     </Box>
+    <Footer />
+    </>
   );
 };
 

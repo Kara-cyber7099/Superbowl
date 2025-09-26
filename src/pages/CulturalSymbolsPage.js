@@ -8,6 +8,11 @@ import {
   Button,
 } from "@mui/material";
 
+import gif from '../assets/images/gif.gif';
+import uncleSam from '../assets/videos/uncleSam.mp4';
+
+import Footer from '../components/footer/Footer';
+
 const CulturalSymbolsPage = () => {
   const [openModal, setOpenModal] = useState(false);
 
@@ -15,6 +20,7 @@ const CulturalSymbolsPage = () => {
   const handleClose = () => setOpenModal(false);
 
   return (
+    <>
     <Box sx={{ p: 4, maxWidth: "900px", mx: "auto" }}>
       {/* Hero Section */}
       <Box sx={{ mb: 4 }}>
@@ -27,18 +33,17 @@ const CulturalSymbolsPage = () => {
           Cultural & Political Symbols: Uncle Sam Reimagined
         </Typography>
 
-        {/* Placeholder for hero clip/screenshot */}
-        <Box
-          component="iframe"
-          src="https://www.youtube.com/embed/yourUncleSamClipID"
-          title="Uncle Sam Clip"
-          sx={{
-            width: "100%",
-            height: "400px",
-            borderRadius: 2,
-            boxShadow: 3,
-          }}
-        />
+        <Box sx={{ width: '100%' }}>
+          <video
+          autoPlay
+          loop
+          poster="">
+            <source
+            src={uncleSam}
+            type="video/mp4"/>
+          </video>
+        </Box>
+        
       </Box>
 
       {/* Paragraph 1 */}
@@ -104,11 +109,13 @@ const CulturalSymbolsPage = () => {
       {/* Crip Walk GIF */}
       <Box
         component="img"
-        src="https://share.google/images/hyegKjCm0l2JNoFkV"
+        src={gif}
         alt="Serena Williams Crip Walk"
         sx={{
           width: "100%",
           maxWidth: "500px",
+          height: '500px',
+          objectFit: 'fit',
           borderRadius: 2,
           mb: 2,
           boxShadow: 2,
@@ -194,6 +201,9 @@ const CulturalSymbolsPage = () => {
         </Box>
       </Modal>
     </Box>
+
+    <Footer />
+    </>
   );
 };
 

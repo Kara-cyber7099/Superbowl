@@ -16,8 +16,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const pages = [
     {
-        url: "/",
-        name: "Home"
+        url: "/Superbowl",
+        name: "Superbowl"
     },
     {
         url: 'red-button-and-new-orleans',

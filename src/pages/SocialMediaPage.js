@@ -9,8 +9,17 @@ import {
   Button,
 } from "@mui/material";
 
+import Footer from '../components/footer/Footer';
+import flagMoment from '../assets/videos/flagMoment.mp4';
+import s1 from '../assets/images/s1.jpg';
+import s2 from '../assets/images/s2.jpg';
+import s3 from '../assets/images/s3.jpg';
+import s4 from '../assets/images/s4.jpg';
+
+
 const SocialMediaPage = () => {
   return (
+    <>
     <Box sx={{ p: 4, maxWidth: "1000px", mx: "auto" }}>
       {/* Heading */}
       <Typography
@@ -30,8 +39,9 @@ const SocialMediaPage = () => {
         {/* Embedded video placeholder */}
         <Box
           component="video"
-          src="https://share.google/videos/yourFlagClip.mp4" // placeholder: replace with actual
+          src={flagMoment} // placeholder: replace with actual
           controls
+          autoPlay
           sx={{ width: "100%", borderRadius: 2, boxShadow: 3, mb: 2 }}
         />
         <Typography variant="body1" sx={{ mb: 2 }}>
@@ -62,71 +72,43 @@ const SocialMediaPage = () => {
         Twitter
       </Typography>
       <Box sx={{ display: "grid", gap: 2, gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", mb: 3 }}>
-        {[
-          "https://share.google/images/Sq9dHTNfri6xRaIyl",
-          "https://share.google/images/zoTC2Jpz7tFqOKVgM",
-          "https://share.google/images/4eABtqmdqr7n5uPi6",
-          "https://share.google/images/hMzkUdtc76lJ3GVaU",
-        ].map((src, idx) => (
-          <Card key={idx} sx={{ borderRadius: 2, boxShadow: 2 }}>
-            <CardMedia
-              component="img"
-              image={src}
-              alt={`Tweet ${idx + 1}`}
-              sx={{ borderRadius: 2 }}
-            />
-          </Card>
-        ))}
-      </Box>
 
-      {/* Instagram */}
-      <Typography variant="subtitle1" gutterBottom>
-        Instagram
-      </Typography>
-      <Box sx={{ display: "grid", gap: 2, gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", mb: 3 }}>
-        {[
-          "https://share.google/images/ndXSXXqEtmHW9AudT",
-          "https://share.google/images/2PiFatDLZug04VMkC",
-          "https://share.google/images/HydLnJJ0eXpoAxEA7",
-        ].map((src, idx) => (
-          <Card key={idx} sx={{ borderRadius: 2, boxShadow: 2 }}>
-            <CardMedia
-              component="img"
-              image={src}
-              alt={`Instagram post ${idx + 1}`}
-              sx={{ borderRadius: 2 }}
-            />
-          </Card>
-        ))}
         <Card sx={{ borderRadius: 2, boxShadow: 2 }}>
           <CardMedia
-            component="iframe"
-            src="https://www.instagram.com/reel/DOU56TljoeP/embed"
-            sx={{ border: 0, minHeight: 400 }}
+            component="img"
+            image={s1}
+            alt="social media post 1"
+            sx={{ borderRadius: 2, objectFit:'fit' }}
           />
         </Card>
-      </Box>
 
-      {/* TikTok */}
-      <Typography variant="subtitle1" gutterBottom>
-        TikTok
-      </Typography>
-      <Box sx={{ display: "grid", gap: 2, gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", mb: 4 }}>
-        {[
-          "https://share.google/images/XkSMQFSkqBavSyoLg",
-          "https://share.google/images/nvWWSXHXbX1UTjGe6",
-          "https://share.google/images/NgLkQzAUh3oi61Rf6",
-          "https://share.google/images/Q5OdfOydOVd0uMw7R",
-        ].map((src, idx) => (
-          <Card key={idx} sx={{ borderRadius: 2, boxShadow: 2 }}>
-            <CardMedia
-              component="img"
-              image={src}
-              alt={`TikTok clip ${idx + 1}`}
-              sx={{ borderRadius: 2 }}
-            />
-          </Card>
-        ))}
+        <Card sx={{ borderRadius: 2, boxShadow: 2 }}>
+          <CardMedia
+            component="img"
+            image={s2}
+            alt="social media post 1"
+            sx={{ borderRadius: 2, objectFit:'fit' }}
+          />
+        </Card>
+
+        <Card sx={{ borderRadius: 2, boxShadow: 2 }}>
+          <CardMedia
+            component="img"
+            image={s3}
+            alt="social media post 1"
+            sx={{ borderRadius: 2, objectFit:'fit' }}
+          />
+        </Card>
+
+        <Card sx={{ borderRadius: 2, boxShadow: 2 }}>
+          <CardMedia
+            component="img"
+            image={s4}
+            alt="social media post 1"
+            sx={{ borderRadius: 2, objectFit:'fit' }}
+          />
+        </Card>
+
       </Box>
 
       {/* Cultural Significance */}
@@ -139,7 +121,7 @@ const SocialMediaPage = () => {
 
       {/* Poll / Feedback */}
       <Typography variant="h6" gutterBottom>
-        Tell us what you thought, besties 💬
+        Tell us what you thought, besties
       </Typography>
       <Button
         variant="contained"
@@ -172,6 +154,9 @@ const SocialMediaPage = () => {
         </ul>
       </Box>
     </Box>
+
+    <Footer />
+    </>
   );
 };
 

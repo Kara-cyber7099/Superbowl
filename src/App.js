@@ -19,7 +19,7 @@ function App() {
       <Navbar />
  
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route index path="/Superbowl" element={<Index />} />
         <Route path="/red-button-and-new-orleans" element={<RedButtonPage />} />
         <Route path="/stage-and-visual-design" element={<StageVisualDesignPage />} />
         <Route path="/costumes-and-dancers" element={<CostumesDancersPage />} />
