@@ -216,7 +216,7 @@ const Index = () => {
             gutterBottom>
               YOU CAN ALSO ENJOY THE SUPERBOWEL PLAYLIST BELOW:
             </Typography>
-            <Button href="https://music.apple.com/za/album/the-old-guard-is-dead-single-version/1804591803?i=1804591829" target="_blank" rel="noopener noreferrer" variant="contained" size="large">
+            <Button href="https://music.apple.com/za/playlist/kendrick-lamars-super-bowl-lix-halftime-show-set-list/pl.8061e4f0d49d4b3aaad50c75d31754c7" target="_blank" rel="noopener noreferrer" variant="contained" size="large">
               Visit the playlist
             </Button>
           </Box>

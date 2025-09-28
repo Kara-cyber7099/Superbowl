@@ -35,6 +35,7 @@ const CulturalSymbolsPage = () => {
 
         <Box sx={{ width: '100%' }}>
           <video
+          style={{ width: '100%' }}
           autoPlay
           loop
           poster="">

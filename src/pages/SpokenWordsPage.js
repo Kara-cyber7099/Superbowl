@@ -33,23 +33,21 @@ const SpokenWordsPage = () => {
           Spoken Words: Language as Resistance
         </Typography>
 
-        {/* Embedded video clip */}
-
         <Box sx={{
          width: '100%', 
          borderRadius: 2, 
        }}>
           <video
+          style={{width: '100%'}}
           autoPlay
           loop
           poster="">
             <source
             src={RevolutionVideo}
-            type="video/mp4">
-              
-            </source>
+            type="video/mp4"/>
           </video>
         </Box>
+          
 
         
 

@@ -99,7 +99,7 @@ export default function StageVisualDesignPage() {
           <Typography variant="h6" fontWeight="bold" align="center" sx={{ mt: 3, mb: 1 }}>
             Explore the Tic-Tac-Toe Stage
           </Typography>
-          <Grid container spacing={1} sx={{ width: "500px", mb: 4 }}>
+          <Grid container spacing={1} sx={{ mb: 4 }}>
             {Array.from({ length: 9 }, (_, i) => i + 1).map((square) => (
               <Grid size={4} key={square}>
                 <Box
