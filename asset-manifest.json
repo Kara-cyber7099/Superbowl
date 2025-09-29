@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Superbowl/static/css/main.e6c13ad2.css",
-    "main.js": "/Superbowl/static/js/main.91720ee1.js",
+    "main.js": "/Superbowl/static/js/main.cc0bc01d.js",
     "static/js/453.7cd12e03.chunk.js": "/Superbowl/static/js/453.7cd12e03.chunk.js",
     "static/media/PerformanceSnippet.mp4": "/Superbowl/static/media/PerformanceSnippet.a89aa9cda81d9cb71cc1.mp4",
     "static/media/flagMoment.mp4": "/Superbowl/static/media/flagMoment.4ea0947c83adeb49127b.mp4",
@@ -22,11 +22,11 @@
     "static/media/evilEyeRing.jpg": "/Superbowl/static/media/evilEyeRing.24d4c76b5e1f7daae8dc.jpg",
     "index.html": "/Superbowl/index.html",
     "main.e6c13ad2.css.map": "/Superbowl/static/css/main.e6c13ad2.css.map",
-    "main.91720ee1.js.map": "/Superbowl/static/js/main.91720ee1.js.map",
+    "main.cc0bc01d.js.map": "/Superbowl/static/js/main.cc0bc01d.js.map",
     "453.7cd12e03.chunk.js.map": "/Superbowl/static/js/453.7cd12e03.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.91720ee1.js"
+    "static/js/main.cc0bc01d.js"
   ]
 }
