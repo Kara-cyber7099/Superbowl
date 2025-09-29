@@ -148,17 +148,15 @@ const Index = () => {
                   Watch Full Performance
                 </Button>
 
-                <video
-                autoPlay
-                loop
-                poster=""
-                >
-                  <source
-                  src={PerformanceSnippet}
-                  type="video/mp4"
-                  />
-                </video>
-                {/* <caption>Video cl</caption> */}
+                <Box
+                  component="video"
+                  src={PerformanceSnippet} // placeholder: replace with actual
+                  controls
+                  autoPlay
+                  muted
+                  sx={{ width: "100%", borderRadius: 2, boxShadow: 3, mb: 2 }}
+                />
+               
               </Card>
             </Grid>
           </Grid>
@@ -249,14 +247,15 @@ const Index = () => {
           component="div"
           elevation={0} 
           sx={{ maxWidth: 'auto', flexGrow: 1 }} >
-            <video
-            autoPlay
-            loop
-            poster="">
-              <source 
-              src={PerformanceSnippet}
-              type="video/mp4"/>
-            </video>
+
+            <Box
+              component="video"
+              src={PerformanceSnippet} // placeholder: replace with actual
+              controls
+              autoPlay
+              muted
+              sx={{ width: "100%", borderRadius: 2, boxShadow: 3, mb: 2 }}
+            />
             <Typography 
             variant="h6" 
             fontWeight="bold"

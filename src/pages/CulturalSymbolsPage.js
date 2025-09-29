@@ -34,15 +34,15 @@ const CulturalSymbolsPage = () => {
         </Typography>
 
         <Box sx={{ width: '100%' }}>
-          <video
-          style={{ width: '100%' }}
-          autoPlay
-          loop
-          poster="">
-            <source
-            src={uncleSam}
-            type="video/mp4"/>
-          </video>
+          <Box
+            component="video"
+            src={uncleSam} // placeholder: replace with actual
+            controls
+            autoPlay
+            muted
+            sx={{ width: "100%", borderRadius: 2, boxShadow: 3, mb: 2 }}
+          />
+   
         </Box>
         
       </Box>

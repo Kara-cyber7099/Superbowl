@@ -37,15 +37,15 @@ const SpokenWordsPage = () => {
          width: '100%', 
          borderRadius: 2, 
        }}>
-          <video
-          style={{width: '100%'}}
-          autoPlay
+         <Box
+          component="video"
+          src={RevolutionVideo} // placeholder: replace with actual
+          controls
           loop
-          poster="">
-            <source
-            src={RevolutionVideo}
-            type="video/mp4"/>
-          </video>
+          autoPlay
+          muted
+          sx={{ width: "100%", borderRadius: 2, boxShadow: 3, mb: 2 }}
+          />
         </Box>
           
 

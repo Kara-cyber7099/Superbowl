@@ -42,15 +42,14 @@ export default function StageVisualDesignPage() {
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', pt: '64px', mb:4 }}>
           <Card elevation={0} sx={{ borderRadius: 2, mb:2 }}>
-            <video
-            autoPlay
-            loop
-            poster=""
-            >
-              <source
-              src={TicTacToeGame}
-              type="video/mp4"/>
-            </video>
+            <Box
+              component="video"
+              src={TicTacToeGame} // placeholder: replace with actual
+              controls
+              autoPlay
+              muted
+              sx={{ width: "100%", borderRadius: 2, boxShadow: 3, mb: 2 }}
+            />          
           </Card>
           <Typography variant="h4" fontWeight="bold" align="center">
             Stage &amp; Visual Design: The Great Game of America

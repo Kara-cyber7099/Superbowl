@@ -67,10 +67,6 @@ const SocialMediaPage = () => {
         Social Media Reactions
       </Typography>
 
-      {/* Twitter */}
-      <Typography variant="subtitle1" gutterBottom>
-        Twitter
-      </Typography>
       <Box sx={{ display: "grid", gap: 2, gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", mb: 3 }}>
 
         <Card sx={{ borderRadius: 2, boxShadow: 2 }}>
